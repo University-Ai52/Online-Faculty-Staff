@@ -34,5 +34,4 @@ The system provides tools for administrators to handle employee records, roles, 
 ---
 
 ## 📁 Project Structure
-
-
+-**user view** - user can moved detween home page , activite page , faculties page ,contact page and about
