@@ -1,0 +1,33 @@
+@media (max-width:1400px) {}
+
+@media (max-width: 1200px) {
+    .logo {
+        translate: -35%;
+    }
+}
+
+@media (max-width: 990px) {
+    nav.navbar {
+        border-radius: 2rem !important;
+
+    }
+
+    .logo {
+        translate: -45%;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 400px) {
+    .nav-item .nav-link {
+        width: 85%;
+    }
+    .dropdown-menu {
+        translate: -10%;
+    }
+}
+
+@media (max-width: 379px) {}

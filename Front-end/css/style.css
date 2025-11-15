@@ -1,29 +1,96 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
 }
-body{
-    margin: 8px;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 240, 240);
 }
-.t-right{
+
+.t-right {
     text-align: right;
 }
-.t-left{
+
+.t-left {
     text-align: left;
 }
-.hidden{
-    display: none;
+
+/* nav design */
+.glass {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-li:hover .hidden{
-    position: absolute;
-    top: 5vh;
-    left: 0;
-    display: initial;
-    list-style: none;
-    background-color: rgb(42, 178, 178);
+
+.glass-dropdown {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 12px;
+    padding: 8px 0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul>li a:hover {
+    background-color: blue !important;
+    color: white !important;
+
+}
+
+.logo {
+    translate: -30%;
+    width: 10%;
+    max-width: 95px;
+    min-width: 68px;
+    height: auto;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav li.dropdown ul li {
+    padding: 5px;
+    white-space: nowrap;
+    border-radius: 8px;
+}
+
+nav li.dropdown ul li>a:hover {
+    border-radius: 8px;
+}
+
+/* hide the menu after appear  */
+.smooth-dropdown {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(10px);
+    animation: smooth-opening 0.8s ease-in-out forwards;
+}
+
+@keyframes smooth-opening {
+    to {
+        display: block;
+        max-height: 3000px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* end nav design */
 /* footer */
 footer {
     background: #000;
@@ -52,4 +119,5 @@ footer {
     color: #868686;
     font-size: 14px;
 }
+
 /* end footer */
