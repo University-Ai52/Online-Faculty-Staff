@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>online stuff</title>
     <link rel="icon" href="images/بني-سويف-الاهلية.png" type="image/x-icon">
+    <!-- fontawesome  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" />
+    <!-- bootstrap  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- ow -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/medai.css">
 </head>
@@ -53,7 +58,8 @@
 
         </div>
     </nav> -->
-    <nav class="navbar navbar-expand-lg glass position-absolute top-0 start-50 translate-middle-x w-75 mt-3 px-4 py-1 z-3 rounded-pill">
+    <nav
+        class="navbar navbar-expand-lg glass position-absolute top-0 start-50 translate-middle-x w-75 mt-3 px-4 py-1 z-3 rounded-pill">
         <div class="container-fluid">
 
             <!-- Logo Left -->
@@ -132,11 +138,78 @@
     </nav>
 
     <section class="hero">
-        <div>
-            <img src="images/bsnu.webp" width="100%" height="100%" alt="">
+        <!-- carousel  -->
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade"  data-bs-ride="carousel"
+            data-bs-interval="4000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/bsnu.webp"
+                        class="d-block img-fluid bd-placeholder-img bd-placeholder-img-lg img-fluid" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bsnu-2.webp"
+                        class="d-block  img-fluid bd-placeholder-img bd-placeholder-img-lg img-fluid" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>second slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bsnu-1.webp"
+                        class="d-block img-fluid bd-placeholder-img bd-placeholder-img-lg img-fluid" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>thrid slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- controlers  -->
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button> -->
+            <!-- indicators controlers -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0"
+                    class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" class="rounded-circle "
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" class="rounded-circle "
+                    aria-label="Slide 3"></button>
+            </div>
         </div>
     </section>
-    <section class="history"></section>
+    <section class="history">
+        <div class="container">
+            <div class="content">
+                <h2>University History</h2>
+                <p>
+                    Beni-Suef University, established in 1976, has a rich history of academic excellence and
+                    community service. Over the decades, it has grown to become a leading institution in Egypt,
+                    offering a wide range of programs and fostering research and innovation.
+                </p>
+                <p>
+                    The university has played a pivotal role in the development of the Beni-Suef region, contributing
+                    to social and economic progress through education and outreach initiatives. With a commitment to
+                    quality education and research, Beni-Suef University continues to shape the future of its students
+                    and the broader community.
+                </p>
+            </div>
+            <div class="image ms-4">
+                <img src="images/bsnu-2.webp" class="img-fluid" alt="University History Image">
+        </div>
+    </section>
     <section class="numbers"></section>
     <section class="adv"></section>
     <section class="news"></section>

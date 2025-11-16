@@ -15,6 +15,31 @@
     .logo {
         translate: -45%;
     }
+
+    /* history section */
+    .history .container {
+        padding: 10% 1%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .history .container .content,
+    .history .container .image {
+
+        width: 100%;
+    }
+
+    .history .container .image {
+        margin-right: 30px;
+        width: 90%;
+    }
+
+    .history .container .image img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width: 768px) {}
@@ -25,6 +50,7 @@
     .nav-item .nav-link {
         width: 85%;
     }
+
     .dropdown-menu {
         translate: -10%;
     }
