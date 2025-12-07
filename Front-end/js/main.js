@@ -6,3 +6,12 @@ button.addEventListener('click', function() {
     menu.classList.toggle('smooth-dropdown');
         });
         // rgb(57 62 68) for bg ground color for numbers
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 500) {
+        navbar.classList.add('position-fixed', 'shadow', 'navbar-show');
+    } else {
+        navbar.classList.remove('position-fixed', 'shadow', 'navbar-show');
+    }
+});

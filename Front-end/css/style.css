@@ -187,7 +187,95 @@ nav li.dropdown ul li>a:hover {
 
 /* end section history */
 
+/* --- ADV Section Styles --- */
+.adv {
+    position: relative;
+    background-image: url('../images/bsnu-2.webp'); /* Use one of your high-quality images */
+    background-attachment: fixed; /* Creates the Parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+}
 
+/* Dark overlay to ensure text readability */
+.adv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darkens the background image */
+    z-index: 1;
+}
+
+.adv .container {
+    position: relative;
+    z-index: 2; /* brings content above overlay */
+}
+
+/* Glassmorphism Cards */
+.adv-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: #fff;
+    height: 100%;
+}
+
+.adv-card:hover {
+    transform: translateY(-10px); /* Lifts up on hover */
+    background: rgba(255, 255, 255, 0.2); /* Slightly brighter on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.adv-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    color: #0d6efd; /* Bootstrap primary color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    font-size: 1.8rem;
+}
+
+/* News */
+.news h1 {
+    font-size: 2.5rem;
+    color: #333333;
+}
+.news .card {
+    /* border: none; */
+    /* border-radius: 15px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.news .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.news .card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+.news .card-body {
+    padding: 20px;
+}
+.news .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #0655dd;
+}
 /* footer */
 footer {
     background: #000;
