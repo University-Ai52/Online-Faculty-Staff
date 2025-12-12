@@ -1,29 +1,318 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
 }
-body{
-    margin: 8px;
+
+:root {
+    --primary: #0655dd;
+    --primary-600: #0d6efd;
+    --muted: #6c757d;
+    --bg: #ffffff;
+    --card-shadow: 0 8px 32px rgba(6,85,221,0.08);
+    --font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
-.t-right{
+
+body {
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+    color: #222;
+    background-color: #fff;
+}
+
+.t-right {
     text-align: right;
 }
-.t-left{
+
+.t-left {
     text-align: left;
 }
-.hidden{
-    display: none;
+
+/* nav design */
+.glass {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-li:hover .hidden{
+
+.glass-primary {
+    background: rgba(47, 86, 204, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(6, 85, 221, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-dropdown {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 12px;
+    padding: 8px 0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul>li a:hover {
+    background-color: blue !important;
+    color: white !important;
+
+}
+
+.logo {
+    transform: translateX(-30%);
+    width: 10%;
+    max-width: 95px;
+    min-width: 68px;
+    height: auto;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav li.dropdown ul li {
+    padding: 5px;
+    white-space: nowrap;
+    border-radius: 8px;
+}
+
+nav li.dropdown ul li>a:hover {
+    border-radius: 8px;
+}
+
+/* hide the menu after appear  */
+.smooth-dropdown {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(10px);
+    animation: smooth-opening 0.8s ease-in-out forwards;
+}
+
+@keyframes smooth-opening {
+    to {
+        display: block;
+        max-height: 3000px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* end nav design */
+
+
+
+/* hero section */
+.hero {
+    height: 100vh;
+    overflow: hidden;
+    max-height: 1500px;
+    text-align: center;
+    color: white;
+}
+
+.hero .carousel-item img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: 100% 50%;
+    filter: brightness(75%);
+}
+
+.hero .carousel-caption {
     position: absolute;
-    top: 5vh;
-    left: 0;
-    display: initial;
-    list-style: none;
-    background-color: rgb(42, 178, 178);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
 }
+
+.hero .carousel-caption h5 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero .carousel-caption p {
+    font-size: 1.5rem;
+}
+
+.hero .carousel-control-prev-icon,
+.hero .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.hero .carousel-indicators button {
+    background-color: #ffffff;
+    opacity: 0.3;
+    width: 15px;
+    height: 15px;
+    margin: 0 7px;
+
+}
+
+.hero .carousel-indicators .active {
+    background-color: #0655dd;
+    opacity: 1;
+}
+
+/* end hero section */
+
+
+/* section history */
+.history {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.history .container {
+    padding: 60px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    column-gap: 30px
+}
+
+.history .container .content {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.history .container .image {
+    width: 45%;
+    margin-top: 50px;
+
+}
+
+.history .container .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* end section history */
+
+/* --- ADV Section Styles --- */
+.adv {
+    position: relative;
+    background-image: url('../images/bsnu-2.webp');
+    /* Use one of your high-quality images */
+    background-attachment: fixed;
+    /* Creates the Parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+/* Dark overlay to ensure text readability */
+.adv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Darkens the background image */
+    z-index: 1;
+}
+
+.adv .container {
+    position: relative;
+    z-index: 2;
+    /* brings content above overlay */
+}
+
+/* Glassmorphism Cards */
+.adv-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Transparent white */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: #fff;
+    height: 100%;
+}
+
+.adv-card:hover {
+    transform: translateY(-10px);
+    /* Lifts up on hover */
+    background: rgba(255, 255, 255, 0.2);
+    /* Slightly brighter on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.adv-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    color: #0d6efd;
+    /* Bootstrap primary color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    font-size: 1.8rem;
+}
+
+/* News */
+.news h1 {
+    font-size: 2.5rem;
+    color: #333333;
+}
+
+.news .card {
+    /* border: none; */
+    /* border-radius: 15px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news .card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news .card-body {
+    padding: 20px;
+}
+
+.news .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #0655dd;
+}
+
 /* footer */
 footer {
     background: #000;
@@ -52,4 +341,178 @@ footer {
     color: #868686;
     font-size: 14px;
 }
+footer a ,footer p{
+    color: #4a93ff !important;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #ffc107 !important;
+    padding-left: 5px;
+    transition: 0.3s;
+}
+
+
 /* end footer */
+/* contact page */
+.page-header {
+    background: linear-gradient(135deg, #0655dd 0%, #0d6efd 100%);
+    color: white;
+    padding: 60px 0 40px 0;
+    margin-top: 0;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.page-header .breadcrumb {
+    background-color: transparent;
+}
+
+.page-header .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.page-header .breadcrumb-item a:hover {
+    color: white;
+}
+
+.page-header .breadcrumb-item.active {
+    color: white;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+/* Icon Box for Contact Info */
+.icon-box-contact {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #0655dd 0%, #0d6efd 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+/* Contact Form Wrapper - Glass Effect */
+.contact-form-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 102, 221, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-wrapper h3 {
+    color: #0655dd;
+}
+
+/* Glass Input Fields */
+.glass-input {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 102, 221, 0.3) !important;
+    color: #333;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #0655dd !important;
+    box-shadow: 0 0 0 0.2rem rgba(6, 85, 221, 0.25) !important;
+    color: #333;
+}
+
+.glass-input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Map Container */
+.map-container {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+}
+
+@media (max-width: 576px) {
+    .map-container iframe {
+        height: 280px;
+    }
+}
+
+/* Professional brand styles */
+.navbar {
+    background: rgba(255,255,255,0.98);
+    border: 1px solid rgba(6,85,221,0.06);
+    box-shadow: 0 8px 24px rgba(18,38,63,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar .navbar-brand {
+    padding: 0.15rem 0;
+}
+
+.nav-link {
+    color: rgba(34,34,34,0.85) !important;
+    font-weight: 600;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    color: var(--bg) !important;
+    background: linear-gradient(90deg, var(--primary), var(--primary-600));
+}
+
+.nav-link.active {
+    color: var(--bg) !important;
+    background: linear-gradient(90deg, var(--primary), var(--primary-600));
+}
+
+.contact-form-wrapper {
+    background: var(--bg);
+    border: 1px solid rgba(6,85,221,0.06);
+    box-shadow: var(--card-shadow);
+}
+
+.icon-box-contact {
+    box-shadow: 0 6px 18px rgba(6,85,221,0.08);
+}
+
+.btn-univ {
+    background: linear-gradient(90deg, var(--primary), var(--primary-600));
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(6,85,221,0.12);
+}
+
+.btn-univ:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(6,85,221,0.16);
+}
+
+/* Improve breadcrumb contrast */
+.page-header .breadcrumb li a { color: rgba(255,255,255,0.85); }
+
+@media (max-width: 992px) {
+    .navbar.w-75 { width: 95% !important; }
+    .logo { transform: translateX(-20%); }
+}
