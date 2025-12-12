@@ -2,7 +2,7 @@
 
 @media (max-width: 1200px) {
     .logo {
-        translate: -35%;
+        transform: translateX(-35%);
     }
 }
 
@@ -13,7 +13,7 @@
     }
 
     .logo {
-        translate: -45%;
+        transform: translateX(-45%);
     }
 
     /* history section */
@@ -52,7 +52,7 @@
     }
 
     .dropdown-menu {
-        translate: -10%;
+        transform: translateX(-10%);
     }
 }
 

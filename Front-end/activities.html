@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online stuff</title>
+    <link rel="icon" href="images/بني-سويف-الاهلية.png" type="image/x-icon">
+    <!-- fontawesome  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" />
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- owl -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css" />
+    <!-- <link rel = "stylesheet" href="../../../../Nti-summary/bootstrap-5.3.8-dist/css/bootstrap.min.css"/> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/medai.css">
+</head>
+<body>
+       <nav class="navbar navbar-expand-lg glass w-75 mt-3 px-4 py-1 rounded-pill mx-auto">
+        <div class="container-fluid">
+
+            <!-- Logo Left -->
+            <a class="navbar-brand d-block logo p-0 m-0" href="#">
+                <img src="images/بني-سويف-الاهلية.png" alt="University Logo">
+            </a>
+
+            <!-- Hamburger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links Center -->
+            <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                <ul class="nav nav-pills navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="activities.html">Activities</a>
+                    </li>
+
+                    <!-- Faculties Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="facultiesDropdown">
+                            Faculties
+                        </a>
+
+                        <ul class="dropdown-menu submenu glass-dropdown rounded-3" aria-labelledby="facultiesDropdown">
+
+                            <li>
+                                <h6 class="dropdown-header">Engineering</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Computer Engineering</a></li>
+                            <li><a class="dropdown-item" href="#">Electrical Engineering</a></li>
+                            <li><a class="dropdown-item" href="#">Mechanical Engineering</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <h6 class="dropdown-header">Medical</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Medicine</a></li>
+                            <li><a class="dropdown-item" href="#">Dentistry</a></li>
+                            <li><a class="dropdown-item" href="#">Pharmacy</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <h6 class="dropdown-header">All Categories</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">All Faculties List</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">About</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Page Header -->
+<header class="page-header">
+    <div class="container">
+        <h1>Student Activities</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Activities</li>
+            </ol>
+        </nav>
+    </div>
+</header>
+
+<section class="activities pb-5">
+    <div class="container">
+        
+        <!-- Filter Logic Section (Based on Diagram Filtering Loop) -->
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto">
+                <div class="filter-bar d-flex align-items-center justify-content-between flex-wrap gap-3 shadow-sm">
+                    <!-- Search Filter -->
+                    <div class="d-flex align-items-center flex-grow-1">
+                        <i class="fa-solid fa-magnifying-glass text-muted me-2"></i>
+                        <input type="text" class="form-control" placeholder="Search activities...">
+                    </div>
+                    
+                    <!-- Vertical Divider -->
+                    <div class="vr d-none d-md-block" style="height: 30px;"></div>
+
+                    <!-- Category Filter -->
+                    <select class="form-select w-auto" aria-label="Category Select">
+                        <option selected>All Categories</option>
+                        <option value="sports">Sports</option>
+                        <option value="science">Scientific</option>
+                        <option value="arts">Arts & Culture</option>
+                    </select>
+
+                    <!-- Date Filter -->
+                    <input type="date" class="form-control w-auto">
+                    
+                    <!-- Action Button -->
+                    <button class="btn btn-primary rounded-pill px-4">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Output: Activity Cards -->
+        <div class="row g-4" id="activitiesGrid">
+            
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm activity-card">
+                    <div class="card-img-wrapper">
+                        <img src="images/bsnu-1.webp" class="card-img-top" alt="Event">
+                        <div class="date-badge">
+                            <span class="day">15</span>
+                            <span class="month">OCT</span>
+                        </div>
+                        <span class="category-tag">Sports</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Annual Marathon</h5>
+                        <p class="card-text text-muted small">A charity run organized by the student union.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 9:00 AM</small>
+                            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm activity-card">
+                    <div class="card-img-wrapper">
+                        <img src="images/bsnu-2.webp" class="card-img-top" alt="Event">
+                        <div class="date-badge">
+                            <span class="day">22</span>
+                            <span class="month">NOV</span>
+                        </div>
+                        <span class="category-tag">Scientific</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Robotics Workshop</h5>
+                        <p class="card-text text-muted small">Learn the basics of Arduino and AI integration.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 12:00 PM</small>
+                            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Card 3 -->
+             <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm activity-card">
+                    <div class="card-img-wrapper">
+                        <img src="images/bsnu.webp" class="card-img-top" alt="Event">
+                        <div class="date-badge">
+                            <span class="day">10</span>
+                            <span class="month">DEC</span>
+                        </div>
+                        <span class="category-tag">Arts</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Art Gallery Opening</h5>
+                        <p class="card-text text-muted small">Showcasing student talents in painting and sculpture.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <small class="text-muted"><i class="fa-regular fa-clock me-1"></i> 5:00 PM</small>
+                            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- "No Results" State (Matches the Alt Path in Diagram) -->
+        <!-- This div is hidden by default (d-none) and shown via JS if filtering returns 0 -->
+        <div class="row d-none" id="noResultsMsg">
+            <div class="col-12 text-center py-5">
+                <div class="text-muted mb-3"><i class="fa-regular fa-folder-open fa-3x"></i></div>
+                <h4>No Activities Found</h4>
+                <p class="text-muted">Try adjusting your filters to see more results.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <!-- footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
